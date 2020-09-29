@@ -4,7 +4,6 @@ file = f.read()
 decryptedFile = ""
 outFileName = input("Enter output filename: ")
 g = open(outFileName+".txt", "w+")
-tmp = 0
 
 # ASCII Encryption
 for i in range(len(file)):
@@ -23,6 +22,6 @@ for i in range(len(file)):
     else:
         # other crap (unchanged)
         g.write(file[i])
-print("Decryption completed")
+print("Decryption completed, file", outFileName + ".txt", "has been created!")
 # How can the last line be deleted?
 g.close()
