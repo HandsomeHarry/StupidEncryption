@@ -22,6 +22,7 @@ for i in range(len(file)):
     else:
         # other crap (unchanged)
         g.write(file[i])
+
 print("Decryption completed, file", outFileName + ".txt", "has been created!")
 # How can the last line be deleted?
 g.close()

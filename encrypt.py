@@ -22,6 +22,7 @@ for i in range(len(file)):
     else:
         # other crap (unchanged)
         g.write(file[i])
+
 print("Encryption completed, file", outFileName + ".encrypted", "has been created!")
 g.write("Get out! You shouldn't be here!")
 g.close()
