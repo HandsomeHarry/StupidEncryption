@@ -9,16 +9,16 @@ tmp = 0
 # ASCII Encryption
 for i in range(len(file)):
     if ord(file[i])<=63 and ord(file[i])>=32:
-        # 32~63: +74
-        g.write(chr(ord(file[i]) +74))
+        # 32~63: +63, becomes 95~126 (31)
+        g.write(chr(ord(file[i]) +63))
     elif ord(file[i])<=79 and ord(file[i])>=64:
-        # 64~79: -15
+        # 64~79: +16, becomes 79~94 (15)
         g.write(chr(ord(file[i]) -15))
     elif ord(file[i])<=100 and ord(file[i])>=80:
-        # 80~100: +26
+        # 80~100: -22, becomes 58~78 (20)
         g.write(chr(ord(file[i]) +26))
     elif ord(file[i])<=126 and ord(file[i])>=101:
-        # 101~126: -53
+        # 101~126: -69, becomes 32~57 (25)
         g.write(chr(ord(file[i]) -53))
     else:
         # other crap
