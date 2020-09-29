@@ -1,5 +1,7 @@
-open(input("Enter filename for decryption (.encrypted file): ")+".encrypted", "w").write(open(input("Enter filename for decryption (.encrypted file): ")+".encrypted", "r").read().replace("Get out! You shouldn't be here!", ''))
-file = open(input("Enter filename for decryption (.encrypted file): ")+".encrypted", "r").read()
+inFileName = input("Enter filename for decryption (.encrypted file): ")
+f = open(inFileName+".encrypted", "r").read().replace("Get out! You shouldn't be here!", '')
+open(inFileName+".encrypted", "w").write(f)
+file = open(inFileName+".encrypted", "r").read()
 outFileName = input("Enter output filename: ")
 g = open(outFileName+".txt", "w+")
 
@@ -21,5 +23,5 @@ for i in range(len(file)):
         # other crap (unchanged)
         g.write(file[i])
 
-print("Decryption completed, file", outFileName + ".txt", "has been created!")
 g.close()
+print("Decryption completed, file", outFileName + ".txt", "has been created!")
