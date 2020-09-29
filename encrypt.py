@@ -1,9 +1,6 @@
 inFileName = input("Enter filename for encryption (.txt file): ")
-f = open(inFileName+".txt", "r")
-file = f.read()
-encryptedFile = ""
-outFileName = input("Enter output filename: ")
-g = open(outFileName+".encrypted", "w+")
+file = open(inFileName+".txt", "r").read()
+g = open(input("Enter output filename: ")+".encrypted", "w+")
 
 # ASCII Encryption
 for i in range(len(file)):
@@ -23,6 +20,6 @@ for i in range(len(file)):
         # other crap (unchanged)
         g.write(file[i])
 
-print("Encryption completed, file", outFileName + ".encrypted", "has been created!")
 g.write("Get out! You shouldn't be here!")
+print("Encryption completed, file", outFileName + ".encrypted", "has been created!")
 g.close()

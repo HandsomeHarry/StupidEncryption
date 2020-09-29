@@ -1,15 +1,7 @@
 inFileName = input("Enter filename for decryption (.encrypted file): ")
-f = open(inFileName+".encrypted", "r")
-Egg = f.read()
-NoEgg = Egg.replace("Get out! You shouldn't be here!", '')
-ff = open(inFileName+".encrypted", "w")
-ff.write(NoEgg)
-ff.flush()
-fff = open(inFileName+".encrypted", "r")
-file = fff.read()
-decryptedFile = ""
-outFileName = input("Enter output filename: ")
-g = open(outFileName+".txt", "w+")
+open(inFileName+".encrypted", "w").write(open(inFileName+".encrypted", "r").read().replace("Get out! You shouldn't be here!", ''))
+file = open(inFileName+".encrypted", "r").read()
+g = open(input("Enter output filename: ")+".txt", "w+")
 
 # ASCII Decryption
 for i in range(len(file)):
@@ -30,5 +22,4 @@ for i in range(len(file)):
         g.write(file[i])
 
 print("Decryption completed, file", outFileName + ".txt", "has been created!")
-# How can the last line be deleted?
 g.close()
