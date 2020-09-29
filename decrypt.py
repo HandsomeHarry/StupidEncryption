@@ -5,7 +5,7 @@ decryptedFile = ""
 outFileName = input("Enter output filename: ")
 g = open(outFileName+".txt", "w+")
 
-# ASCII Encryption
+# ASCII Decryption
 for i in range(len(file)):
     if ord(file[i])<=126 and ord(file[i])>=95:
         # 32~63: +63, becomes 95~126 (31)
