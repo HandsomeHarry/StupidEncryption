@@ -1,7 +1,7 @@
-inFileName = input("Enter filename for decryption (.encrypted file): ")
-open(inFileName+".encrypted", "w").write(open(inFileName+".encrypted", "r").read().replace("Get out! You shouldn't be here!", ''))
-file = open(inFileName+".encrypted", "r").read()
-g = open(input("Enter output filename: ")+".txt", "w+")
+open(input("Enter filename for decryption (.encrypted file): ")+".encrypted", "w").write(open(input("Enter filename for decryption (.encrypted file): ")+".encrypted", "r").read().replace("Get out! You shouldn't be here!", ''))
+file = open(input("Enter filename for decryption (.encrypted file): ")+".encrypted", "r").read()
+outFileName = input("Enter output filename: ")
+g = open(outFileName+".txt", "w+")
 
 # ASCII Decryption
 for i in range(len(file)):

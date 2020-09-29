@@ -1,6 +1,6 @@
-inFileName = input("Enter filename for encryption (.txt file): ")
-file = open(inFileName+".txt", "r").read()
-g = open(input("Enter output filename: ")+".encrypted", "w+")
+file = open(input("Enter filename for encryption (.txt file): ")+".txt", "r").read()
+outFileName = input("Enter output filename: ")
+g = open(outFileName+".encrypted", "w+")
 
 # ASCII Encryption
 for i in range(len(file)):
