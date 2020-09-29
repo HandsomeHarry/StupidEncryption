@@ -3,8 +3,7 @@ f = open(inFileName+".txt", "r")
 file = f.read()
 encryptedFile = ""
 outFileName = input("Enter output filename: ")
-g = open(outFileName+".txt", "w+")
-goldilock = g.read()
+g = open(outFileName+".encrypted", "w+")
 tmp = 0
 
 # ASCII Encryption
@@ -24,12 +23,12 @@ for i in range(len(file)):
     else:
         # other crap
         g.write(file[i])
-g.write("Get out! You shouldn't be here!")
 print("First stage of encryption completed")
 
 # head-to-foot
-for i in range(len(file)):
-    g.write(goldilock[len(file)-i-1])
-print("Second stage of encryption completed")
+goldilock = g.read()
+for i in range(len(goldilock)):
+    g.write(goldilock[len(goldilock)-i-1])
 
+g.write("Get out! You shouldn't be here!")
 g.close()
