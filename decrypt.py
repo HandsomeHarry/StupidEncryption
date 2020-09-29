@@ -1,4 +1,4 @@
-inFileName = input("Enter filename for decryption (ends in .encrypted): ")
+inFileName = input("Enter filename for decryption (.encrypted file): ")
 f = open(inFileName+".encrypted", "r")
 file = f.read()
 decryptedFile = ""
