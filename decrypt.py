@@ -5,6 +5,19 @@ decryptedFile = ""
 outFileName = input("Enter output filename: ")
 g = open(outFileName+".txt", "w+")
 
+# Delete the Egg
+Egg = f.read()
+NoEgg = Egg.replace("Get out! You shouldn't be here!", '')
+
+ff = open(inFileName+".encrypted", "w")
+ff.write(NoEgg)
+ff.flush()
+fff = open(inFileName+".encrypted", "r")
+file = fff.read()
+decryptedFile = ""
+outFileName = input("Enter output filename: ")
+g = open(outFileName+".txt", "w+")
+
 # ASCII Decryption
 for i in range(len(file)):
     if ord(file[i])<=126 and ord(file[i])>=95:
