@@ -1,8 +1,13 @@
-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN PQRSTUVWXYZ)!@#$%^&*()0123456789
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789
+!"#$%&'()*+,-./
+:;<=>?
+^_`~ 
 To be, or not to be, that is the question:
 Whether 'tis nobler in the mind to suffer
 The slings and arrows of outrageous fortune,
- r to take arms against a sea of troubles
+Or to take arms against a sea of troubles
 And by opposing end them. To die—to sleep,
 No more; and by a sleep to say we end
 The heart-ache and the thousand natural shocks
@@ -32,4 +37,4 @@ Is sicklied o'er with the pale cast of thought,
 And enterprises of great pitch and moment
 With this regard their currents turn awry
 And lose the name of action.
-]&5e065feI06e4)06-%/l5e#&e)&3&f
+]&5e065feJ06e4)06-%/l5e#&e)&3&f

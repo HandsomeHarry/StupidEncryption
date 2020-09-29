@@ -12,8 +12,8 @@ for i in range(len(file)):
         # 32~63: +63, becomes 95~126 (31)
         g.write(chr(ord(file[i]) - 63))
     elif ord(file[i])<=94 and ord(file[i])>=79:
-        # 64~79: +16, becomes 79~94 (15)
-        g.write(chr(ord(file[i]) - 16))
+        # 64~79: +15, becomes 79~94 (15)
+        g.write(chr(ord(file[i]) - 15))
     elif ord(file[i])<=78 and ord(file[i])>=58:
         # 80~100: -22, becomes 58~78 (20)
         g.write(chr(ord(file[i]) + 22))
@@ -23,6 +23,6 @@ for i in range(len(file)):
     else:
         # other crap (unchanged)
         g.write(file[i])
-
 print("Decryption completed")
+# How can the last line be deleted?
 g.close()
