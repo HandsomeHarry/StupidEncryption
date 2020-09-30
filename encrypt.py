@@ -3,6 +3,7 @@ outFileName = input("Enter output filename: ")
 g = open(outFileName+".encrypted", "w+")
 
 # ASCII Encryption
+print("Encrypting...")
 for i in range(len(f)):
     if ord(f[i])<=63 and ord(f[i])>=32:
         # 32~63: +63, becomes 95~126 (31)

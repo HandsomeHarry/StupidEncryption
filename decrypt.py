@@ -6,6 +6,7 @@ outFileName = input("Enter output filename: ")
 g = open(outFileName+".txt", "w+")
 
 # ASCII Decryption
+print("Decrypting...")
 for i in range(len(f)):
     if ord(f[i])<=126 and ord(f[i])>=95:
         # 32~63: +63, becomes 95~126 (31)

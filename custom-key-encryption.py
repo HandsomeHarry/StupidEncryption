@@ -5,10 +5,10 @@ g = open(outFileName+".encrypted", "w+")
 arr = []
 
 # Ask for input
-print("Now you're going to enter 3 numbers to be the encryption key, between 0 and 66")
-arr.append(int(input("Enter the first number: ")) + 33)
-arr.append(int(input("Enter the second number: ")) + 33)
-arr.append(int(input("Enter the third number: ")) + 33)
+print("Please enter 3 encryption keys, between 0 and 66")
+arr.append(int(input("first key: ")) + 33)
+arr.append(int(input("second key: ")) + 33)
+arr.append(int(input("third key: ")) + 33)
 
 # Bubble sort the inputs
 for i in range(1, len(arr)):
@@ -32,6 +32,7 @@ g.write(str(b))
 g.write(str(c))
 
 # ASCII Encryption
+print("Encrypting...")
 for i in range(len(f)):
     if ord(f[i])<=a and ord(f[i])>=32:
         # 32~a: +126-a, becomes 158-a~126 (a-32)
