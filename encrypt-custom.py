@@ -20,7 +20,6 @@ for i in range(1, len(arr)):
 a = arr[0]
 b = arr[1]
 c = arr[2]
-print(a,b,c)
 
 # Check input
 if a>99 or a<33 or b>99 or b<33 or c>99 or c<33:
