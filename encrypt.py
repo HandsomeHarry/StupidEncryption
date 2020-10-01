@@ -5,16 +5,16 @@ g = open(outFileName+".encrypted", "w+")
 # ASCII Encryption
 print("Encrypting...")
 for i in range(len(f)):
-    if ord(f[i])<=63 and ord(f[i])>=32:
+    if ord(f[i])>=32 and ord(f[i])<=63:
         # 32~63: +63, becomes 95~126 (31)
         g.write(chr(ord(f[i]) + 63))
-    elif ord(f[i])<=79 and ord(f[i])>=64:
+    elif ord(f[i])>=64 and ord(f[i])<=79:
         # 64~79: +15, becomes 79~94 (15)
         g.write(chr(ord(f[i]) + 15))
-    elif ord(f[i])<=100 and ord(f[i])>=80:
+    elif ord(f[i])>=80 and ord(f[i])<=100:
         # 80~100: -22, becomes 58~78 (20)
         g.write(chr(ord(f[i]) - 22))
-    elif ord(f[i])<=126 and ord(f[i])>=101:
+    elif ord(f[i])>=101 and ord(f[i])<=126:
         # 101~126: -69, becomes 32~57 (25)
         g.write(chr(ord(f[i]) - 69))
     else:
