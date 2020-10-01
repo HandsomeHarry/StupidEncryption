@@ -39,16 +39,16 @@ else:
 print("Decrypting...")
 for i in range(len(f)):
     if ord(f[i])>=32 and ord(f[i])<=157-c:
-        # 32~157-c: +c-31, becomes c+1~126 (126-c)
+        # 32~157-c: +c-31, becomes c+1~126
         g.write(chr(ord(f[i]) + c - 31))
     elif ord(f[i])>=158-c and ord(f[i])<=157-b:
-        # 158-c~157-b: +c+b-157, becomes b+1~c (c-b)
+        # 158-c~157-b: +c+b-157, becomes b+1~c
         g.write(chr(ord(f[i]) + c + b - 157))
     elif ord(f[i])>=158-b and ord(f[i])<=157-a:
-        # 158-b~157-a: +b+a-157, becomes a+1~b (b-a)
+        # 158-b~157-a: +b+a-157, becomes a+1~b
         g.write(chr(ord(f[i]) + b + a - 157))
     elif ord(f[i])>=158-a and ord(f[i])<=126:
-        # 158-a~126: +a-126, becomes 32~a (a-32)
+        # 158-a~126: +a-126, becomes 32~a
         g.write(chr(ord(f[i]) + a - 126))
     else:
         # other crap (unchanged)
