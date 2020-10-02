@@ -1,8 +1,5 @@
 # Initialize
-inFileName = input("Enter filename for decryption (.encrypted file): ") #string
-f = open(inFileName+".encrypted", "r").read().replace("Get out! You shouldn't be here!", '') #string
-open(inFileName+".encrypted", "w").write(f)
-f = open(inFileName+".encrypted", "r").read() #string
+f = open(input("Enter filename for decryption (.encrypted file): ")+".encrypted", "r").read() #string
 outFileName = input("Enter output filename: ") #string
 g = open(outFileName+".txt", "w+") #file
 arr = [] #array
@@ -37,7 +34,7 @@ else:
 
 # ASCII Decryption
 print("Decrypting...")
-for i in range(len(f)):
+for i in range(6, len(f)-31):
     if ord(f[i])>=32 and ord(f[i])<=157-c:
         # 32~157-c: +c-31, becomes c+1~126
         g.write(chr(ord(f[i]) + c - 31))

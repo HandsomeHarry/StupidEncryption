@@ -1,8 +1,8 @@
 # Initialize
-f = open(input("Enter filename for encryption (.txt file): ")+".txt", "r").read()
-outFileName = input("Enter output filename: ")
-g = open(outFileName+".encrypted", "w+")
-arr = []
+f = open(input("Enter filename for encryption (.txt file): ")+".txt", "r").read() #string
+outFileName = input("Enter output filename: ") #string
+g = open(outFileName+".encrypted", "w+") #file
+arr = [] #array
 
 # Ask for input
 print("Please enter 3 encryption keys, between 0 and 66")
@@ -17,7 +17,7 @@ for i in range(1, len(arr)):
             arr[j], arr[j+1] = arr[j+1], arr[j]
 
 # Make variables
-a = arr[0]
+a = arr[0] #integer
 b = arr[1]
 c = arr[2]
 
@@ -42,7 +42,7 @@ for i in range(len(f)):
         g.write(chr(ord(f[i]) - b - a + 157))
     elif ord(f[i])<=c and ord(f[i])>=b+1:
         # b+1~c: c+b-157, becomes 158-c~157-b
-        g.write(chr(ord(f[i]) + c + b - 157))
+        g.write(chr(ord(f[i]) + c + b - 155))
     elif ord(f[i])<=126 and ord(f[i])>=c+1:
         # c+1~126: +31-c, becomes 32~157-c
         g.write(chr(ord(f[i]) + 31 - c))

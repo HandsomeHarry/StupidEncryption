@@ -1,13 +1,10 @@
-inFileName = input("Enter filename for decryption (.encrypted file): ")
-f = open(inFileName+".encrypted", "r").read().replace("Get out! You shouldn't be here!", '')
-open(inFileName+".encrypted", "w").write(f)
-f = open(inFileName+".encrypted", "r").read()
+f = open(input("Enter filename for decryption (.encrypted file): ")+".encrypted", "r").read()
 outFileName = input("Enter output filename: ")
 g = open(outFileName+".txt", "w+")
 
 # ASCII Decryption
 print("Decrypting...")
-for i in range(len(f)):
+for i in range(len(f)-31):
     if ord(f[i])<=126 and ord(f[i])>=95:
         # 32~63: +63, becomes 95~126 (31)
         g.write(chr(ord(f[i]) - 63))
