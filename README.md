@@ -1,5 +1,5 @@
 # StupidEncryption
-A stupid encryption method for text files with ASCII characters, other characters won't be encrypted (like UTF-8 and unicode)
+A stupid encryption method for text files with ASCII characters, other characters won't be encrypted (like unicode)
 
 ## References:
 How to read from files: https://www.w3school.com.cn/python/ref_file_read.asp
